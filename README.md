@@ -106,8 +106,25 @@
 > }, 10);
 > ```
 
-### **All in one hacks**
+### **Visible hiding animals (buggy)**
+> ```
+> setInterval(function () {
+> game.currentScene.myAnimal.handleHide = (function(){
+> game.currentScene.myAnimal.inner.alpha = 0.6
+> game.currentScene.myAnimal.sprite.scale.x = game.currentScene.myAnimal.origScale.x * 0.7
+> game.currentScene.myAnimal.sprite.scale.y = game.currentScene.myAnimal.origScale.y * 0.7
+> })
+> for (let i = 0; i < game.currentScene.entityManager.animalsList.length; i++) {
+> game.currentScene.entityManager.animalsList[i].handleHide = (function(){
+> game.currentScene.entityManager.animalsList[i].inner.alpha = 0.6
+> game.currentScene.entityManager.animalsList[i].sprite.scale.x = game.currentScene.entityManager.animalsList[i].origScale.x * 0.7
+> game.currentScene.entityManager.animalsList[i].sprite.scale.y = game.currentScene.entityManager.animalsList[i].origScale.y * 0.7
+> })
+> }
+> }, 10);
+> ```
 
+### **All in one hacks**
 > ```
 > setInterval(function () {
 > for (let i = 0; i < game.currentScene.terrainManager.terrains.length; i++) {
@@ -119,5 +136,17 @@
 >     maxWidth: 1e7,
 > })
 > game.currentScene.terrainManager.shadow.setShadowSize(1000000)
+> game.currentScene.myAnimal.handleHide = (function(){
+> game.currentScene.myAnimal.inner.alpha = 0.6
+> game.currentScene.myAnimal.sprite.scale.x = game.currentScene.myAnimal.origScale.x * 0.7
+> game.currentScene.myAnimal.sprite.scale.y = game.currentScene.myAnimal.origScale.y * 0.7
+> })
+> for (let i = 0; i < game.currentScene.entityManager.animalsList.length; i++) {
+> game.currentScene.entityManager.animalsList[i].handleHide = (function(){
+> game.currentScene.entityManager.animalsList[i].inner.alpha = 0.6
+> game.currentScene.entityManager.animalsList[i].sprite.scale.x = game.currentScene.entityManager.animalsList[i].origScale.x * 0.7
+> game.currentScene.entityManager.animalsList[i].sprite.scale.y = game.currentScene.entityManager.animalsList[i].origScale.y * 0.7
+> })
+> }
 > }, 10);
 > ```
