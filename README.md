@@ -1,6 +1,7 @@
 ## For v3, use https://hacked-deeeep.glitch.me  
 
 ## For v4, read below
+### ⚠ IMPORTANT ⚠ WHEN CHANGING GAMEMODES (OR LOADING A NEW MAP, E.G. PD/1V1), YOU NEED TO RUN window.game = this WHEN YOU GET TO THE DEBUG PAUSE.
 ### Pt. 1 — Enabling Commands!
 > 1. Go to https://beta.deeeep.io
 
